@@ -1,0 +1,72 @@
+/*  Syntax Quick Reference for Jeet
+	--------------------------
+	column(ratios = 1, offset = 0, cycle = 0, uncycle = 0, gutter = jeet.gutter)
+	span(ratio = 1, offset = 0)
+	shift(ratios = 0, col_or_span = column, gutter = jeet.gutter)
+	unshift()
+	edit()
+	center(max_width = 1410px, pad = 0)
+	stack(pad = 0, align = false)
+	unstack()
+	align(direction = both)
+	cf()
+
+	For more info see:
+		Kouto Swiss Doc: http://kouto-swiss.io/
+		Jeet Doc: http://jeet.gs
+
+	And of course, look in node_modules for axis-css and jeet
+*/
+@import "kouto-swiss"
+@import "jeet"
+
+@font-face
+	font-family Mairy
+	font-style normal
+	src url(../fonts/mairy_book-webfont.ttf)
+
+normalize()
+
+body
+	color rgb(255,255,255)
+	font-family Mairy
+
+.content
+	center(70%)
+
+header
+	position fixed
+	width 100%
+	height 80px
+
+#menu
+	position absolute
+	top 0px
+	right 0px
+	heigth 20px
+	width 20px
+	margin 10px
+
+	line
+		stroke #ffffff
+		stroke-width 3px
+
+section
+	height 100vh
+	display flex
+	flex-direction column
+	align-items	center
+	justify-content center
+	background-size cover
+	background-repeat no-repeat
+	background-position top center
+	h1
+		text-transform uppercase
+
+.section1
+	background-image url(../img/bg1.png)
+	background-color #df105b
+
+.section2
+	color #df105b
+	background-color #f9f9f9
