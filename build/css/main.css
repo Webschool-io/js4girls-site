@@ -22,6 +22,21 @@
   font-style: normal;
   src: url("../fonts/mairy_book-webfont.ttf");
 }
+@font-face {
+  font-family: Mairy Hairline;
+  font-style: normal;
+  src: url("../fonts/mairy_hairline-webfont.ttf");
+}
+@font-face {
+  font-family: Mairy Light;
+  font-style: normal;
+  src: url("../fonts/mairy_light-webfont.ttf");
+}
+@font-face {
+  font-family: Geometria Light;
+  font-style: normal;
+  src: url("../fonts/Geometria-Light.otf");
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -204,6 +219,7 @@ th {
 body {
   color: #fff;
   font-family: Mairy;
+  font-size: 14px;
 }
 .content {
   *zoom: 1;
@@ -225,21 +241,30 @@ body {
   clear: both;
 }
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 80px;
+  margin-top: 20px;
+}
+.logo-brand {
+  background-image: url("../img/logo-name.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 162px;
+  height: 80px;
+  float: left;
 }
 #menu {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  heigth: 20px;
-  width: 20px;
+  position: fixed;
+  right: 20px;
+  height: 40px;
+  width: 40px;
   margin: 10px;
+  cursor: pointer;
 }
 #menu line {
   stroke: #fff;
-  stroke-width: 3px;
+  stroke-width: 5px;
 }
 section {
   height: 100vh;
@@ -262,13 +287,71 @@ section {
   background-position: top center;
 }
 section h1 {
-  text-transform: uppercase;
+  font-family: Mairy Hairline;
+  font-size: 6em;
+  margin: 10px 0;
+}
+section h1 span {
+  font-family: Mairy Light;
 }
 .section1 {
   background-image: url("../img/bg1.png");
   background-color: #df105b;
+  padding-top: 120px;
+}
+.section1 .home-subtitle {
+  width: 70%;
+  font-size: 2em;
+  font-family: Geometria Light;
+}
+.section1 .btn-sponsor {
+  background: rgba(73,201,199,0.4);
+  padding: 10px 15%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  transition-duration: 0.5s;
+}
+.section1 .btn-sponsor:hover {
+  background: rgba(73,201,199,0.7);
 }
 .section2 {
   color: #df105b;
   background-color: #f9f9f9;
+}
+@media screen and (max-width: 1024px) {
+  .content {
+    max-width: 100%;
+    width: 80%;
+  }
+  section {
+    min-height: 100vh;
+    height: auto;
+  }
+  section h1 {
+    font-size: 3em;
+  }
+  .section1 {
+    padding-top: 40px;
+  }
+  .section1 .home-subtitle {
+    width: 100%;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 769px) {
+  .content {
+    width: 90%;
+  }
+  section h1 {
+    font-size: 2.5em;
+  }
+  .section1 .home-subtitle {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  #menu {
+    right: 0;
+  }
 }
