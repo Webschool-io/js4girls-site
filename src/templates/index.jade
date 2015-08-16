@@ -12,21 +12,21 @@ html
 		header
 			nav
 				.logo-brand
-				#menu(data-attr='toglleMenu')
+				#menu(data-attr='toggleMenu')
 					svg(width='40px',height='40px')
 						line(x1=0,y1=10,x2=40,y2=10)
 						line(x1=0,y1=20,x2=40,y2=20)
 						line(x1=0,y1=30,x2=40,y2=30)
 
 				div.menu.is-closed(data-attr='menu')
-					a.close(data-attr='toglleMenu') x
+					a.close(data-attr='toggleMenu') x
 					ul
 						li.menu-item
-							a(href="#home") Home
+							a(href="#home" data-attr='toggleMenu') Home
 						li.menu-item
-							a(href="#events") Eventos
+							a(href="#events" data-attr='toggleMenu') Eventos
 						li.menu-item
-							a(href="#about") Sobre
+							a(href="#about" data-attr='toggleMenu') Sobre
 
 		section#home
 			.content
