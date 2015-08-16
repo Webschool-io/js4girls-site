@@ -263,6 +263,13 @@ li {
 nav {
   padding: 10px 20px;
 }
+.btn-close {
+  font-size: 4em;
+  line-height: 1em;
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
 .content {
   *zoom: 1;
   width: auto;
@@ -329,13 +336,6 @@ nav {
   opacity: 0;
   z-index: -1;
   transition: opacity 0.2s linear;
-}
-.menu .close {
-  font-size: 4em;
-  line-height: 1em;
-  position: absolute;
-  right: 40px;
-  top: 0;
 }
 .menu-item a {
   font-size: 2.8em;
@@ -467,6 +467,9 @@ section.bg-white {
 @media screen and (max-width: 769px) {
   #menu {
     right: 0;
+  }
+  .btn-close {
+    right: 10px;
   }
   .content {
     width: 90%;
