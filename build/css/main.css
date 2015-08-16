@@ -246,6 +246,11 @@ h4 {
 .title span {
   font-family: Mairy Light;
 }
+.subtitle {
+  width: 70%;
+  font-size: 2em;
+  font-family: Geometria Light;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -369,11 +374,6 @@ section#home {
   background-color: #df105b;
   padding-top: 120px;
 }
-section#home .home-subtitle {
-  width: 70%;
-  font-size: 2em;
-  font-family: Geometria Light;
-}
 section#home .btn-sponsor {
   background: rgba(73,201,199,0.4);
   padding: 10px 15%;
@@ -455,25 +455,38 @@ section.bg-white {
     min-height: 100vh;
     height: auto;
   }
-  section h1 {
+  .title {
     font-size: 3em;
   }
-  .section1 {
+  .subtitle,
+  width 100%,
+  font-size 1.5em,
+  #home {
     padding-top: 40px;
   }
 }
 @media screen and (max-width: 769px) {
+  #menu {
+    right: 0;
+  }
   .content {
     width: 90%;
   }
-  section h1 {
+  .title {
     font-size: 2.5em;
   }
-  .section1 .home-subtitle {
+  .subtitle {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
-  #menu {
-    right: 0;
+  .event-excerpt {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .list-events .event-excerpt {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
   }
 }
