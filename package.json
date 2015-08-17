@@ -20,7 +20,7 @@
     "browser-sync": "^1.9.2",
     "connect-modrewrite": "^0.7.12",
     "grunt": "^0.4.5",
-    "gulp": "^3.9.0",
+    "gulp": "^3.8.11",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
     "gulp-if": "^1.2.5",
