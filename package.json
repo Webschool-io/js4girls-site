@@ -7,13 +7,13 @@
     "test": "karma start"
   },
   "dependencies": {
-    "gulp": "~3.6.2",
+    "gulp": "^3.6.2",
     "gulp-concat": "~2.2.0",
     "gulp-if": "~1.0.0",
     "gulp-jade": "~0.5.0",
-    "rupture": "~0.0.3",
+    "gulp-stylus": "~1.0.0",
     "gulp-uglify": "~0.2.1",
-    "gulp-stylus": "~1.0.0"
+    "rupture": "~0.0.3"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.2.0",
