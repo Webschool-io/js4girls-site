@@ -27,7 +27,7 @@ gulp.task('jade', function(){
     return gulp.src('src/templates/*.jade')
     .pipe(plumber())
     .pipe(jade({pretty: !env.p }))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('./'))
 });
 
 // Call Uglify and Concat JS
@@ -36,7 +36,7 @@ gulp.task('js', function(){
     .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(gulpif(env.p, uglify()))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('js'))
 });
 
 // Call Uglify and Concat JS
@@ -45,7 +45,7 @@ gulp.task('browserify', function(){
     .pipe(plumber())
     .pipe(browserify({debug: !env.p }))
     .pipe(gulpif(env.p, uglify()))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('js'))
 });
 
 // Call Stylus
@@ -56,7 +56,7 @@ gulp.task('stylus', function(){
         use:[koutoSwiss(), prefixer(), jeet(),rupture()],
         compress: env.p
     }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('css'))
 });
 
 // Call Imagemin
@@ -64,14 +64,14 @@ gulp.task('imagemin', function() {
     return gulp.src('src/img/**/*')
     .pipe(plumber())
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('img'));
 });
 
 
 gulp.task('font', function() {
     return gulp.src('src/fonts/*')
     .pipe(plumber())
-    .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest('fonts'));
 });
 
 // Call Watch
@@ -94,16 +94,16 @@ gulp.task('watchfy', function(){
 
 gulp.task('browser-sync', function () {
     var files = [
-        'build/**/*.html',
-        'build/css/**/*.css',
-        'build/img/**/*',
-        'build/js/**/*.js',
-        'build/fonts/*'
+        '**/*.html',
+        'css/**/*.css',
+        'img/**/*',
+        'js/**/*.js',
+        'fonts/*'
     ];
 
     browserSync.init(files, {
         server: {
-            baseDir: './build/'
+            baseDir: './'
         }
     });
 });
@@ -112,7 +112,7 @@ gulp.task('browser-sync', function () {
 gulp.task('deploy', function(){
     rsync({
         ssh: true,
-        src: './build/',
+        src: './',
         dest: 'user@hostname:/path/to/www',
         recursive: true,
         syncDest: true,
@@ -130,7 +130,7 @@ gulp.task('default', ['js', 'jade', 'stylus', 'imagemin', 'font', 'watch', 'brow
 gulp.task('fy', ['browserify', 'jade', 'stylus', 'imagemin', 'font', 'watchfy', 'browser-sync']);
 
 // Build and Deploy
-gulp.task('build', ['js', 'jade', 'stylus', 'imagemin', 'font', 'deploy']);
+gulp.task('build', ['js', 'jade', 'stylus', 'imagemin', 'font']);
 
 // Build and Deploy
-gulp.task('buildfy', ['browserify', 'jade', 'stylus', 'imagemin', 'deploy']);
+gulp.task('buildfy', ['browserify', 'jade', 'stylus', 'imagemin']);
