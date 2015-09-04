@@ -436,6 +436,9 @@ section.bg-white {
 .bg-flp {
   background-image: url("../img/city-flp.png");
 }
+.bg-ntl {
+  background-image: url("../img/city-ntl.png");
+}
 @media screen and (max-width: 1024px) {
   .content {
     max-width: 100%;
