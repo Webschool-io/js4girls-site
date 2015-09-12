@@ -166,8 +166,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button
-:-moz-focus-inner,
+button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -441,6 +440,9 @@ section.bg-white {
 }
 .bg-san {
   background-image: url("../img/city-san.png");
+}
+.bg-pg {
+  background-image: url("../img/city-pg.png");
 }
 @media screen and (max-width: 1024px) {
   .content {
