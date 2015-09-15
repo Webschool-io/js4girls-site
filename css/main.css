@@ -372,6 +372,17 @@ section#about {
   background-color: #36a2a0;
   background-image: url("../img/bg-green.jpg");
 }
+section#make-happen {
+  background-image: url("../img/bg1.png");
+  background-color: #df105b;
+}
+section#make-happen a {
+  color: #fff;
+}
+section#make-happen ul {
+  padding: 10px 30px;
+  list-style: square;
+}
 section.bg-white {
   color: #df105b;
 }

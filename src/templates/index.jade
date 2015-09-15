@@ -62,65 +62,10 @@ html
 						li.menu-item
 							a(href="#about" data-attr='toggleMenu') Sobre
 
-		section#home
-			.content
-				h1.title Entendendo a
-					span  JS4Girls
-				.subtitle
-					p O JS4Girls (Javascript for Girls) tende a ser um modelo OPEN SOURCE e FREE para ensino de Javascript para mulheres, visto que o meio de programação é deveras machista e ter um ambiente MAN-FREE pode ser bem mais proveitoso.
-				//- a.btn-sponsor(href='http://www.google.com', target='_blank') Sponsor us
-
-		section#events.bg-white
-			.content
-				h1.title Eventos
-				ul.list-events
-					li.event-excerpt.bg-rj
-						a(href="https://www.facebook.com/JS4GirlsRio" target="_blank")
-							strong JS4Girls
-							p SC Rio de Janeiro
-							p 15 de Agosto
-					li.event-excerpt.bg-sp
-						a(href="https://www.facebook.com/JS4GirlsSampa" target="_blank")
-							strong JS4Girls
-							p SP São Paulo
-							p 15 de Agosto
-					li.event-excerpt.bg-flp
-						a(href="https://www.facebook.com/JS4GirlsFloripa" target="_blank")
-							strong JS4Girls
-							p SC Santa Catarina
-							p 15 de Agosto
-					li.event-excerpt.bg-nfb
-						a(href="https://www.facebook.com/JS4GirlsNovaFriburgo" target="_blank")
-							strong JS4Girls
-							p SC Nova Friburgo
-							p 15 de Agosto
-					li.event-excerpt.bg-poa
-						a(href="https://www.facebook.com/js4girlsportoalegre" target="_blank")
-							strong JS4Girls SC
-							p Porto Alegre
-							p 15 de Agosto
-					li.event-excerpt.bg-ntl
-						a(href="https://www.facebook.com/pages/JS4GirlsNatal/516037521884409" target="_blank")
-							strong JS4Girls RN
-							p Natal
-							p 12 de Setembro
-					li.event-excerpt.bg-san
-						a(href="https://www.facebook.com/events/405902856266687/" target="_blank")
-							strong JS4Girls SP
-							p Santos
-							p 12 de Setembro
-					li.event-excerpt.bg-pg
-						a(href="https://www.facebook.com/events/1730212183874731/" target="_blank")
-							strong JS4Girls PR
-							p Ponta Grossa
-							p 19 de Setembro
-
-		section#about.bg-green
-			.content
-				h1.title Sobre
-				p A ideia eh que apenas a primeira aula seja dada presencialmente, 6 horas, com o evento tendo 8 horas ao total, sendo 1 de almoço e 2 intervalos de coffe break de 30 min. A aula será dada por cada garota que organizar o evento em sua cidade.
-				p O conteúdo já foi criado, mas qm quiser contribuir é só entrar em contato pela página no facebook.
-				p O evento será feito mensal ou bimensal dependendo da procura por cidade.
+		include ./pages/home.jade
+		include ./pages/events.jade
+		include ./pages/about.jade
+		include ./pages/make-happen.jade
 
 		script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 		script(type="text/javascript", src="js/main.js")
