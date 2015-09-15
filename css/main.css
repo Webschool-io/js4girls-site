@@ -329,8 +329,10 @@ nav {
   width: 100%;
   z-index: 3;
 }
-.menu.is-closed {
+display block.is-closed {
   position: absolute;
+}
+display none {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
