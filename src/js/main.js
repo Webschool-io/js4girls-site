@@ -1,16 +1,20 @@
 // put your code here
 // remember, you can use modules with browserify
 
-$(function(){
-	var toggleMenu = $("[data-attr='toggleMenu']");
+$(function() {
+  function menuCollapse() {
+    var openMenu = $("#menu, [data-attr='toglleMenu']")
+      , menu = $(".menu[data-attr='menu']")
+      , itemMenu = menu.find('a');
 
-	toggleMenu.on('click', function(){
-		menuCollapse();
-	});
+    openMenu.on('click touchend', function() {
+      menu.toggleClass('is-closed');
+    });
 
-	menuCollapse = function() {
-		var menu = $("[data-attr='menu']");
-		menu.toggleClass('is-closed');
-	}
+    itemMenu.on('click touchend', function() {
+      menu.addClass('is-closed');
+    });
+  }
 
+  menuCollapse();
 });
