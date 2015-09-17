@@ -372,14 +372,14 @@ section#about {
   background-color: #36a2a0;
   background-image: url("../img/bg-green.jpg");
 }
-section#make-happen {
+section#in-my-city {
   background-image: url("../img/bg1.png");
   background-color: #df105b;
 }
-section#make-happen a {
+section#in-my-city a {
   color: #fff;
 }
-section#make-happen ul {
+section#in-my-city ul {
   padding: 10px 30px;
   list-style: square;
 }
