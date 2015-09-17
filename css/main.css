@@ -218,8 +218,6 @@ th {
 }
 * {
   -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
@@ -269,6 +267,7 @@ nav {
   position: absolute;
   right: 40px;
   top: 0;
+  cursor: pointer;
 }
 .content {
   *zoom: 1;
@@ -295,7 +294,6 @@ nav {
   background-repeat: no-repeat;
   width: 162px;
   height: 80px;
-  float: left;
   position: absolute;
 }
 #menu {
@@ -306,9 +304,6 @@ nav {
   margin: 10px;
   cursor: pointer;
 }
-#menu:hover {
-  cursor: pointer;
-}
 #menu line {
   stroke: #ffdde9;
   stroke-width: 5px;
@@ -316,6 +311,7 @@ nav {
 .menu {
   background-color: rgba(226,39,107,0.9);
   height: 100%;
+  width: 100%;
   left: 0;
   -ms-filter: none;
   -webkit-filter: none;
@@ -326,18 +322,16 @@ nav {
   position: fixed;
   text-align: center;
   top: 0;
-  width: 100%;
   z-index: 3;
+  display: block;
 }
 .menu.is-closed {
-  position: absolute;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 0.2s linear;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
 }
 .menu-item a {
   font-size: 2.8em;
@@ -369,7 +363,6 @@ section {
   background-position: top center;
   padding: 120px 10px 40px;
   position: relative;
-  z-index: 1;
 }
 section#home {
   background-image: url("../img/bg1.png");
@@ -378,6 +371,17 @@ section#home {
 section#about {
   background-color: #36a2a0;
   background-image: url("../img/bg-green.jpg");
+}
+section#make-happen {
+  background-image: url("../img/bg1.png");
+  background-color: #df105b;
+}
+section#make-happen a {
+  color: #fff;
+}
+section#make-happen ul {
+  padding: 10px 30px;
+  list-style: square;
 }
 section.bg-white {
   color: #df105b;
@@ -456,9 +460,10 @@ section.bg-white {
   .title {
     font-size: 3em;
   }
-  .subtitle,
-  width 100%,
-  font-size 1.5em,
+  .subtitle {
+    width: 100%;
+    font-size: 1.5em;
+  }
   #home {
     padding-top: 40px;
   }

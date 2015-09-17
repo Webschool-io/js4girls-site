@@ -1,20 +1,12 @@
 {
-  "name": "Fast",
+  "name": "JS4Girls",
   "version": "1.0.0",
-  "description": "A simple boilerplate to create projects with jade, stylus and gulp.",
+  "description": "Modelo OPEN SOURCE e FREE para ensino de Javascript para mulheres.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "karma start"
   },
-  "dependencies": {
-    "gulp": "^3.6.2",
-    "gulp-concat": "~2.2.0",
-    "gulp-if": "~1.0.0",
-    "gulp-jade": "~0.5.0",
-    "gulp-stylus": "~1.0.0",
-    "gulp-uglify": "~0.2.1",
-    "rupture": "~0.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer-stylus": "^0.2.0",
     "browser-sync": "^1.9.2",
@@ -42,21 +34,5 @@
     "minimist": "0.0.9",
     "rsyncwrapper": "^0.4.3",
     "rupture": "0.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/willianjusten/Fast.git"
-  },
-  "keywords": [
-    "Jade",
-    "Stylus",
-    "Gulp",
-    "Jeet"
-  ],
-  "author": "Willian Justen <willianjustenqui@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/willianjusten/Fast/issues"
-  },
-  "homepage": "https://github.com/willianjusten/Fast"
+  }
 }
