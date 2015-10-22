@@ -330,7 +330,6 @@ nav {
   filter: alpha(opacity=0);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: visibility 0s linear 0.2s, opacity 0.2s linear;
   transition: visibility 0s linear 0.2s, opacity 0.2s linear;
 }
 .menu-item a {
